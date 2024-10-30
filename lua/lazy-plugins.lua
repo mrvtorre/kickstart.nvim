@@ -20,11 +20,11 @@ require('lazy').setup({
   -- Use `opts = {}` to force a plugin to be loaded.
   --
 
-  require('kickstart/plugins/gitsigns'),
+  require 'kickstart/plugins/gitsigns',
 
-  require('kickstart/plugins/which-key'),
+  require 'kickstart/plugins/which-key',
 
-  require('kickstart/plugins/telescope'),
+  require 'kickstart/plugins/telescope',
 
   -- LSP Plugins
   {
@@ -52,7 +52,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim',       opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
 
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',
@@ -68,25 +68,28 @@ require('lazy').setup({
     end,
     event = 'VeryLazy',
   },
-  require('kickstart/plugins/cmake-tools'),
+  require 'kickstart/plugins/cmake-tools',
 
   -- Autoformat
-  require('kickstart/plugins/conform'),
+  require 'kickstart/plugins/conform',
 
   -- Autocompletion
-  require('kickstart/plugins/cmp'),
+  require 'kickstart/plugins/cmp',
 
   -- Tokyo Night Colorscheme
-  require('kickstart/plugins/tokyo-night'),
+  require 'kickstart/plugins/tokyo-night',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   -- Collection of various small independent plugins/modules
-  require('kickstart/plugins/mini'),
+  require 'kickstart/plugins/mini',
 
   -- Highlight, edit, and navigate code
-  require('kickstart/plugins/treesitter'),
+  require 'kickstart/plugins/treesitter',
+
+  -- Markdown-preview
+  require 'custom/plugins/markdown-preview',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
