@@ -180,8 +180,9 @@ vim.list_extend(ensure_installed, {
   'stylua', -- Used to format Lua code
   'clangd', -- Used for C/C++/Objective-C
   'clang-format',
-  'pyright',
   'black',
+  'isort',
+  'debugpy', -- Python debugger
   -- 'sonarlint-language-server', -- Used for static analysis
 })
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }
