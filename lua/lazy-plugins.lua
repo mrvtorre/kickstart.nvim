@@ -92,7 +92,7 @@ require('lazy').setup({
   require 'custom/plugins/markdown-preview',
 
   -- VimTex
-  require 'custom/plugins/vimtex',
+  -- require 'custom/plugins/vimtex',
 
   -- Git-blame
   require 'custom.plugins.git-blame',
