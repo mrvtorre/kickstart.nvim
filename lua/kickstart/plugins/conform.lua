@@ -31,7 +31,7 @@ return { -- Autoformat
       }
     end,
     formatters_by_ft = {
-      lua = { 'stylua' },
+      -- lua = { 'stylua' },
       cpp = { 'clang-format' },
       hpp = { 'clang-format' },
       python = { 'isort', 'black' },
