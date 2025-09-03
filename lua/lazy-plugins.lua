@@ -94,6 +94,9 @@ require('lazy').setup({
   -- VimTex
   -- require 'custom/plugins/vimtex',
 
+  -- Swagger preview
+  require 'custom.plugins.swagger-preview',
+
   -- Git-blame
   require 'custom.plugins.git-blame',
 
