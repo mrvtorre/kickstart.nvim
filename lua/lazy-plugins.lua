@@ -103,6 +103,9 @@ require('lazy').setup({
   -- Alpha: startup screen
   require 'custom.plugins.alpha',
 
+  -- Emoji.nvim: Emoji support
+  require 'custom.plugins.emoji-nvim',
+
   -- vim-kitty: syntax highlighting for Kitty terminal configuration and session files
   {
     "fladson/vim-kitty",

@@ -36,6 +36,7 @@ return { -- Autoformat
       hpp = { 'clang-format' },
       python = { 'isort', 'black' },
       tex = { 'texindent' },
+      json = { "prettier" }
       -- Conform can also run multiple formatters sequentially
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
