@@ -106,6 +106,9 @@ require('lazy').setup({
   -- Emoji.nvim: Emoji support
   require 'custom.plugins.emoji-nvim',
 
+  -- Copilot Chat
+  require 'custom.plugins.sidekick',
+
   -- vim-kitty: syntax highlighting for Kitty terminal configuration and session files
   {
     "fladson/vim-kitty",
