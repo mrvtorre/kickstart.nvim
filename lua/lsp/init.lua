@@ -186,9 +186,9 @@ vim.list_extend(ensure_installed, {
   'clang-format',
   'black',
   'isort',
-  'debugpy',                 -- Python debugger
+  'debugpy', -- Python debugger
   'texlab',
-  "copilot-language-server", -- For AI Copilot
+  'copilot-language-server', -- For AI Copilot
   -- 'sonarlint-language-server', -- Used for static analysis
 })
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }
