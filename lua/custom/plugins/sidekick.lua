@@ -8,6 +8,8 @@ return {
         enabled = true,
       },
     },
+    -- Disable Next Edit Suggestion (NES)
+    nes = { enabled = false },
   },
   keys = {
     {
