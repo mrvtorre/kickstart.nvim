@@ -61,13 +61,7 @@ require('lazy').setup({
       require 'lsp'
     end,
   },
-  {
-    'folke/trouble.nvim',
-    config = function()
-      require('trouble').setup()
-    end,
-    event = 'VeryLazy',
-  },
+
   require 'kickstart/plugins/cmake-tools',
 
   -- Autoformat
@@ -108,6 +102,9 @@ require('lazy').setup({
 
   -- Copilot Chat
   require 'custom.plugins.sidekick',
+
+  -- Trouble: list showing diagnostics, references, telescope results, etc.
+  require 'custom.plugins.trouble',
 
   -- vim-kitty: syntax highlighting for Kitty terminal configuration and session files
   {
