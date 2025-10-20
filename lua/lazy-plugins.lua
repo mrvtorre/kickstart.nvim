@@ -106,6 +106,9 @@ require('lazy').setup({
   -- Trouble: list showing diagnostics, references, telescope results, etc.
   require 'custom.plugins.trouble',
 
+  -- Snacks: a collection of smaller plugins created by folke
+  require 'custom.plugins.snacks',
+
   -- vim-kitty: syntax highlighting for Kitty terminal configuration and session files
   {
     'fladson/vim-kitty',
