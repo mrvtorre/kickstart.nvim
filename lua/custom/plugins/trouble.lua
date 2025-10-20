@@ -1,12 +1,22 @@
 return {
   'folke/trouble.nvim',
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  opts = {},
   cmd = 'Trouble',
   keys = {
     {
       '<leader>xx',
       '<cmd>Trouble diagnostics toggle<cr>',
       desc = 'Diagnostics (Trouble)',
+    },
+    {
+      '<leader>xn',
+      '<cmd>Trouble diagnostics next<cr>',
+      desc = 'Diagnostics next (Trouble)',
+    },
+    {
+      '<leader>xN',
+      '<cmd>Trouble diagnostics prev<cr>',
+      desc = 'Diagnostics previous (Trouble)',
     },
     {
       '<leader>xX',
