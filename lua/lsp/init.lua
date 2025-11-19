@@ -182,7 +182,7 @@ require('mason').setup()
 local ensure_installed = vim.tbl_keys(servers or {})
 vim.list_extend(ensure_installed, {
   'stylua', -- Used to format Lua code
-  'clangd', -- Used for C/C++/Objective-C
+  -- 'clangd', -- Used for C/C++/Objective-C
   'clang-format',
   'black',
   'isort',
@@ -196,6 +196,10 @@ require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 require('mason-lspconfig').setup {
   handlers = {
     function(server_name)
+      -- Skip clangd as it's configured manually below
+      if server_name == 'clangd' then
+        return
+      end
       local server = servers[server_name] or {}
       -- This handles overriding only values explicitly passed
       -- by the server configuration above. Useful when disabling
@@ -205,5 +209,19 @@ require('mason-lspconfig').setup {
     end,
   },
 }
+
+-- Setup clangd manually with custom configuration since it's not managed by Mason
+local clangd_config = servers.clangd or {}
+clangd_config.capabilities = vim.tbl_deep_extend('force', {}, capabilities, clangd_config.capabilities or {})
+
+-- Configure clangd using vim.lsp.config for Neovim 0.11+
+-- This must be set BEFORE any clangd client starts
+vim.lsp.config('clangd', {
+  cmd = clangd_config.cmd,
+  filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
+  root_markers = { 'CMakeLists.txt', '.clangd', '.clang-tidy', '.clang-format', 'compile_commands.json', 'compile_flags.txt', '.git' },
+  capabilities = clangd_config.capabilities,
+  single_file_support = clangd_config.single_file_support,
+})
 
 require('lsp.sonarlint').setup()

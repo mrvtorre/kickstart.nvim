@@ -1,4 +1,6 @@
 local nvim_lsp = require 'lspconfig'
+local televic_config = require 'televic'
+
 return {
   root_dir = nvim_lsp.util.root_pattern 'CMakeLists.txt',
   single_file_support = true,
@@ -19,6 +21,8 @@ return {
   cmd = {
     'clangd',
     '--clang-tidy',
-    '--query-driver=' .. require('televic').build_scripts_path .. '/toolchains/' .. require('televic').toolchainfile .. '/bin/i686-linux-g++',
+    '--background-index',
+    '--compile-commands-dir=' .. televic_config.plixus_apps_build_dir,
+    '--query-driver=' .. televic_config.build_scripts_path .. '**/*g++',
   },
 }
