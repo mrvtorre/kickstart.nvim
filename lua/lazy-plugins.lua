@@ -109,6 +109,8 @@ require('lazy').setup({
   -- Snacks: a collection of smaller plugins created by folke
   require 'custom.plugins.snacks',
 
+  require 'custom.plugins.lualine',
+
   -- vim-kitty: syntax highlighting for Kitty terminal configuration and session files
   {
     'fladson/vim-kitty',
