@@ -34,7 +34,14 @@ return { -- Autoformat
       -- lua = { 'stylua' },
       cpp = { 'clang-format' },
       hpp = { 'clang-format' },
-      python = { 'isort', 'black' },
+      python = {
+        -- Formatting
+        'ruff_format',
+        -- Sorting imports
+        'ruff_organize_imports',
+        -- Alows linter to auto-fix lint errors
+        'ruff_fix',
+      },
       tex = { 'texindent' },
       json = { 'prettier' },
       -- Conform can also run multiple formatters sequentially

@@ -186,6 +186,8 @@ vim.list_extend(ensure_installed, {
   'clang-format',
   'black',
   'isort',
+  'ruff',
+  'pyright',
   'debugpy', -- Python debugger
   'texlab',
   'copilot-language-server', -- For AI Copilot
